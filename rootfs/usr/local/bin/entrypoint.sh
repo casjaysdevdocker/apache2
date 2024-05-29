@@ -9,11 +9,11 @@
 # @@Copyright        :  Copyright: (c) 2023 Jason Hempstead, Casjays Developments
 # @@Created          :  Monday, Sep 04, 2023 17:01 EDT
 # @@File             :  docker-entrypoint
-# @@Description      :  
+# @@Description      :
 # @@Changelog        :  New script
 # @@TODO             :  Better documentation
-# @@Other            :  
-# @@Resource         :  
+# @@Other            :
+# @@Resource         :
 # @@Terminal App     :  no
 # @@sudo/root        :  no
 # @@Template         :  other/docker-entrypoint
@@ -66,7 +66,7 @@ SERVICE_USER=""  # execute command as another user
 SERVICE_GROUP="" # Set the service group
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Primary server port- will be added to server ports
-WEB_SERVER_PORT="" # port : 80,443
+WEB_SERVER_PORT="80" # port : 80,443
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Secondary ports
 SERVER_PORTS="" # specifiy other ports
@@ -76,9 +76,9 @@ WWW_ROOT_DIR="" # set default web dir
 DATABASE_DIR="" # set database dir
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Healthcheck variables
-HEALTH_ENABLED="yes" # enable healthcheck [yes/no]
-SERVICES_LIST="tini" # comma seperated list of processes for the healthcheck
-HEALTH_ENDPOINTS=""  # url endpoints: [http://localhost/health,http://localhost/test]
+HEALTH_ENABLED="yes"       # enable healthcheck [yes/no]
+SERVICES_LIST="tini,httpd" # comma seperated list of processes for the healthcheck
+HEALTH_ENDPOINTS=""        # url endpoints: [http://localhost/health,http://localhost/test]
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Overwrite variables
 
